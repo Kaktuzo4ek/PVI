@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Chess Puzzles</title>
+  </head>
+  <body>
+
+    <div id="table">
+    <table cellspacing="0">
+      <tr>
+        <th>1</th>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td class="green"><img class="img" src="img/wp.png"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+      </tr>
+
+      <tr>
+        <th>4</th>
+        <td class="white"></td>
+        <td class="green"><img class="img" src="img/wp.png"></td>
+        <td class="white"></td>
+        <td class="green"><img class="img" src="img/wk.png"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+      </tr>
+
+      <tr>
+        <th>5</th>
+        <td class="green"></td>
+        <td class="white"><img class="img" src="img/bp.png"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+      </tr>
+
+      <tr>
+        <th>6</th>
+        <td class="white"><img class="img" src="img/bp.png"></td>
+        <td class="green"><img class="img" src="img/bk.png"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+      </tr>
+
+      <tr>
+        <th>7</th>
+        <td class="green"><img class="img" src="img/wn.png"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+      </tr>
+
+      <tr>
+        <th>8</th>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+        <td class="white"></td>
+        <td class="green"></td>
+      </tr>
+
+      <tr id="letters">
+        <th class="letters"></th>
+        <th class="letters">H</th>
+        <th class="letters">G</th>
+        <th class="letters">F</th>
+        <th class="letters">E</th>
+        <th class="letters">D</th>
+        <th class="letters">C</th>
+        <th class="letters">B</th>
+        <th class="letters">A</th>
+      </tr>
+
+    </table>
+    </div>
+
+    <div id="inputArea">
+      <form id="form" method="GET" name="myForm">
+        <h2>Chess Puzzles</h2>
+
+        <input id="login" class="input" type="text" name="login" placeholder="Login" minlength="6" maxlength="20" required><br>
+        <input id="password" class="input" type="password" name="password" placeholder="Password" minlength="6" maxlength="20" required><br>
+
+        <label id="regText"for="checkbox">Register?</label>
+        <input id="checkbox" type="checkbox" name="registerChecked" value="on" onchange="hideOrShow()"><br>
+        <div id="signUpArea">
+
+          <hr><label for="levelArea" id ="levelText">Level:</label>
+
+          <div id="userLevel" class="radio-item">
+            <input id="beginner" class="radio" type="radio" name="userLevel" value="beginner">
+            <label class="textRadio" for="beginner">Beginner</label>
+            <input id="intermediate" class="radio" type="radio" name="userLevel" value="intermediate">
+            <label class="textRadio" for="intermediate">Intermediate</label>
+            <input id="pro" type="radio" class="radio" name="userLevel" value="pro">
+            <label class="textRadio" for="pro">Pro</label><br>
+          </div>
+
+          <label id="describe" for="textarea">Describe your chess idea:</label><br>
+          <textarea id="textarea" name="describe"></textarea><br>
+          <input id="country" list="countryList" name="country" placeholder="Country">
+          <datalist id="countryList">
+            <option value="Ukraine"></option>
+            <option value="Germany"></option>
+            <option value="Russia"></option>
+            <option value="Poland"></option>
+          </datalist>
+        </div>
+
+      <br><button id="signIn" class="button" type="submit" onclick="authorize()">Sign In</button>
+      <button id="signUp" class ="button" type="submit" onclick="register()">Sign Up</button><br>
+      <a id="rulLink" class="link" href="https://www.chess.com/uk/pravila-shakhi" target="_blank">Chess Rules</a>
+      <a id="puzLink" class="link" href="https://www.chess.com/puzzles/problem/484736" target="_blank">Puzzle Solution</a>
+    </form>
+  </div>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>
